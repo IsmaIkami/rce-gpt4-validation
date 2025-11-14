@@ -2,7 +2,7 @@
 
 **Author:** Ismail Sialyen
 **DOI:** 10.5281/zenodo.17360372
-**Live Results:** [https://ismaikami.github.io/rce-gpt4-validation](https://ismaikami.github.io/rce-gpt4-validation) *(to be deployed)*
+**Live Results:** [https://ismaikami.github.io/rce-gpt4-validation](https://ismaikami.github.io/rce-gpt4-validation)
 
 ## Overview
 
