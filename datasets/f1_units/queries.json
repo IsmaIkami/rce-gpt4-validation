@@ -1,0 +1,101 @@
+{
+  "task_family": "F1 - Units Consistency",
+  "description": "Dimensional analysis problems requiring unit conversion and consistency checking",
+  "source": "Publication Section 5.1 (p. 10) - RCE_V5.1_published.pdf",
+  "queries": [
+    {
+      "id": "f1_001",
+      "query": "A car travels 60 km/h for 30 minutes. How far in meters?",
+      "domain": "physics",
+      "expected_answer": "30000 meters",
+      "ground_truth_value": 30000,
+      "tolerance": 0.05,
+      "source": "Example from publication page 10",
+      "validation_method": "dimensional_analysis",
+      "coherence_modules": ["mu_units", "mu_arith"]
+    },
+    {
+      "id": "f1_002",
+      "query": "Convert 100 kg·m/s² to Newtons",
+      "domain": "physics",
+      "expected_answer": "100 Newtons",
+      "ground_truth_value": 100,
+      "tolerance": 0.01,
+      "source": "Implied from publication dimensional analysis examples",
+      "validation_method": "unit_equivalence",
+      "coherence_modules": ["mu_units"]
+    },
+    {
+      "id": "f1_003",
+      "query": "If pressure is 101,325 Pa, what is it in atmospheres?",
+      "domain": "physics",
+      "expected_answer": "1 atmosphere",
+      "ground_truth_value": 1.0,
+      "tolerance": 0.01,
+      "source": "NIST standard pressure conversion",
+      "validation_method": "unit_conversion",
+      "coherence_modules": ["mu_units"]
+    },
+    {
+      "id": "f1_004",
+      "query": "A force of 50 N acts on a mass of 10 kg. What is the acceleration in m/s²?",
+      "domain": "physics",
+      "expected_answer": "5 m/s²",
+      "ground_truth_value": 5.0,
+      "tolerance": 0.05,
+      "source": "Newton's second law (F=ma)",
+      "validation_method": "dimensional_analysis",
+      "coherence_modules": ["mu_units", "mu_arith"]
+    },
+    {
+      "id": "f1_005",
+      "query": "Convert 3600 seconds to hours",
+      "domain": "time",
+      "expected_answer": "1 hour",
+      "ground_truth_value": 1.0,
+      "tolerance": 0.01,
+      "source": "Standard time unit conversion",
+      "validation_method": "unit_conversion",
+      "coherence_modules": ["mu_units", "mu_time"]
+    },
+    {
+      "id": "f1_006",
+      "query": "A runner completes 5 km in 25 minutes. What is their speed in m/s?",
+      "domain": "physics",
+      "expected_answer": "3.33 m/s",
+      "ground_truth_value": 3.33,
+      "tolerance": 0.05,
+      "source": "Speed = distance/time calculation",
+      "validation_method": "dimensional_analysis",
+      "coherence_modules": ["mu_units", "mu_arith", "mu_time"]
+    },
+    {
+      "id": "f1_007",
+      "query": "Convert 2.5 liters to cubic centimeters",
+      "domain": "volume",
+      "expected_answer": "2500 cubic centimeters",
+      "ground_truth_value": 2500.0,
+      "tolerance": 0.01,
+      "source": "Volume unit conversion (1L = 1000cm³)",
+      "validation_method": "unit_conversion",
+      "coherence_modules": ["mu_units"]
+    },
+    {
+      "id": "f1_008",
+      "query": "A power of 1000 Watts is used for 2 hours. How much energy in kWh?",
+      "domain": "energy",
+      "expected_answer": "2 kWh",
+      "ground_truth_value": 2.0,
+      "tolerance": 0.01,
+      "source": "Energy = Power × Time",
+      "validation_method": "dimensional_analysis",
+      "coherence_modules": ["mu_units", "mu_arith", "mu_time"]
+    }
+  ],
+  "total_queries": 8,
+  "validation_criteria": {
+    "metric": "exact_numerical_accuracy",
+    "tolerance": "±5%",
+    "coherence_threshold": 0.90
+  }
+}

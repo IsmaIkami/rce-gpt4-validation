@@ -1,0 +1,35 @@
+{
+  "task_family": "F5 - Factual Grounding",
+  "description": "Question-answering requiring specific URL citations with entailment verification",
+  "source": "Publication Section 5.1 (p. 11) - RCE_V5.1_published.pdf",
+  "queries": [
+    {
+      "id": "f5_001",
+      "query": "What is the capital of France?",
+      "expected_answer": "Paris",
+      "requires_url_citation": true,
+      "entailment_threshold": 0.9,
+      "source": "Example from publication page 11",
+      "coherence_modules": ["mu_entail"]
+    },
+    {
+      "id": "f5_002",
+      "query": "Who wrote '1984'?",
+      "expected_answer": "George Orwell",
+      "requires_url_citation": true,
+      "entailment_threshold": 0.9,
+      "source": "Example from publication page 11",
+      "coherence_modules": ["mu_entail"]
+    },
+    {
+      "id": "f5_003",
+      "query": "When was the Eiffel Tower completed?",
+      "expected_answer": "1889",
+      "requires_url_citation": true,
+      "entailment_threshold": 0.9,
+      "source": "Factual grounding example",
+      "coherence_modules": ["mu_entail"]
+    }
+  ],
+  "total_queries": 3
+}

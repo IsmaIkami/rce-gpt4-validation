@@ -1,0 +1,63 @@
+{
+  "task_family": "F6 - Contradictory Reasoning",
+  "description": "Double negatives and contradictory logic requiring careful reasoning to avoid hallucinations",
+  "source": "RCE_VALUE_ANALYSIS.md - Pure Logic Detection",
+  "queries": [
+    {
+      "id": "f6_001",
+      "query": "If it's not true that the medication doesn't work, does the medication work?",
+      "expected_answer": "yes",
+      "domain": "logic",
+      "tolerance": "exact",
+      "source": "Double negative test from pure logic module",
+      "coherence_modules": ["mu_reason"],
+      "challenge": "LLMs often get confused by double negatives"
+    },
+    {
+      "id": "f6_002",
+      "query": "A report states a sample weighs 500 grams. Later it says 0.5 kilograms. Is this contradictory?",
+      "expected_answer": "no",
+      "domain": "units",
+      "tolerance": "exact",
+      "source": "RCE_VALUE_ANALYSIS.md",
+      "coherence_modules": ["mu_units"],
+      "challenge": "Requires unit conversion validation"
+    },
+    {
+      "id": "f6_003",
+      "query": "Statement 1: The drug reduces fever. Statement 2: The medication doesn't increase body temperature. Are these consistent?",
+      "expected_answer": "yes",
+      "domain": "medical",
+      "tolerance": "exact",
+      "source": "Logical consistency test",
+      "coherence_modules": ["mu_reason"],
+      "challenge": "Paraphrase detection and logical equivalence"
+    },
+    {
+      "id": "f6_004",
+      "query": "If it isn't the case that the system isn't secure, is the system secure?",
+      "expected_answer": "yes",
+      "domain": "logic",
+      "tolerance": "exact",
+      "source": "Double negative chain",
+      "coherence_modules": ["mu_reason"],
+      "challenge": "Nested double negatives"
+    },
+    {
+      "id": "f6_005",
+      "query": "Document says: Temperature is 25°C. Later: Temperature is 77°F. Is there a contradiction?",
+      "expected_answer": "no",
+      "domain": "units",
+      "tolerance": "exact",
+      "source": "Unit conversion contradiction test",
+      "coherence_modules": ["mu_units"],
+      "challenge": "Temperature conversion accuracy (25C = 77F)"
+    }
+  ],
+  "total_queries": 5,
+  "validation_criteria": {
+    "metric": "logical_accuracy",
+    "tolerance": "exact_match",
+    "coherence_threshold": 0.80
+  }
+}

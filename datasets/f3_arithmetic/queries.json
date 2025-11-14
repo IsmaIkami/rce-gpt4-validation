@@ -1,0 +1,101 @@
+{
+  "task_family": "F3 - Compositional Arithmetic",
+  "description": "Multi-step word problems requiring arithmetic operations with numerical consistency",
+  "source": "Publication Section 5.1 (p. 11) - RCE_V5.1_published.pdf, GSM8K-inspired",
+  "queries": [
+    {
+      "id": "f3_001",
+      "query": "Sarah has 12 apples. She gives 3 to Tom and buys 8 more. How many apples does Sarah have?",
+      "domain": "arithmetic",
+      "expected_answer": "17 apples",
+      "ground_truth_value": 17,
+      "tolerance": 0.05,
+      "source": "Example from publication page 11",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_002",
+      "query": "A store sells shirts for $15 each. If you buy 4 shirts with a 10% discount, how much do you pay?",
+      "domain": "arithmetic",
+      "expected_answer": "$54",
+      "ground_truth_value": 54.0,
+      "tolerance": 0.05,
+      "source": "Example from publication page 11",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_003",
+      "query": "John has $50. He buys 3 books at $12 each and a pen for $5. How much money does he have left?",
+      "domain": "arithmetic",
+      "expected_answer": "$9",
+      "ground_truth_value": 9.0,
+      "tolerance": 0.05,
+      "source": "GSM8K-style multi-step problem",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_004",
+      "query": "A factory produces 45 widgets per hour. How many widgets are produced in 8 hours if 12 are defective and discarded?",
+      "domain": "arithmetic",
+      "expected_answer": "348 widgets",
+      "ground_truth_value": 348,
+      "tolerance": 0.05,
+      "source": "Multi-step with distractor",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_005",
+      "query": "Emma reads 25 pages per day. After 12 days, she has 180 pages left. How many pages is the book?",
+      "domain": "arithmetic",
+      "expected_answer": "480 pages",
+      "ground_truth_value": 480,
+      "tolerance": 0.05,
+      "source": "Reverse calculation",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_006",
+      "query": "A pizza is cut into 8 slices. If 3 people each eat 2 slices, how many slices remain?",
+      "domain": "arithmetic",
+      "expected_answer": "2 slices",
+      "ground_truth_value": 2,
+      "tolerance": 0.01,
+      "source": "Simple multi-step",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_007",
+      "query": "A train ticket costs $8. A group of 15 people buys tickets. If 3 people are children with 50% discount, what is the total cost?",
+      "domain": "arithmetic",
+      "expected_answer": "$108",
+      "ground_truth_value": 108.0,
+      "tolerance": 0.05,
+      "source": "Discount calculation with groups",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    },
+    {
+      "id": "f3_008",
+      "query": "If 5 boxes contain 24 pens each, and you give away 30 pens, how many pens do you have left?",
+      "domain": "arithmetic",
+      "expected_answer": "90 pens",
+      "ground_truth_value": 90,
+      "tolerance": 0.05,
+      "source": "Multi-step with subtraction",
+      "validation_method": "exact_numerical_accuracy",
+      "coherence_modules": ["mu_arith"]
+    }
+  ],
+  "total_queries": 8,
+  "validation_criteria": {
+    "metric": "exact_numerical_accuracy",
+    "tolerance": "±5%",
+    "coherence_threshold": 0.90
+  }
+}

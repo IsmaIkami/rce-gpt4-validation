@@ -1,0 +1,236 @@
+{
+  "task_family": "f7_temporal_reasoning",
+  "total_queries": 5,
+  "queries": [
+    {
+      "query_id": "f7_001",
+      "query_text": "A meeting starts at 3 PM and lasts 5 hours. Another meeting at 7 PM must end before the first meeting finishes. Is this possible?",
+      "expected_answer": "no",
+      "domain": "temporal",
+      "task_family": "f7_temporal_reasoning",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "yes",
+          "execution_time": 0.4894568920135498,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "no",
+          "execution_time": 0.40634703636169434,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "yes",
+          "execution_time": 0.41143798828125,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f7_002",
+      "query_text": "Event A is scheduled for 2:00 PM. Event B must happen before Event A and after 2:30 PM. Is this timeline possible?",
+      "expected_answer": "no",
+      "domain": "temporal",
+      "task_family": "f7_temporal_reasoning",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "no",
+          "execution_time": 0.2526671886444092,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "no",
+          "execution_time": 0.39295172691345215,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "no",
+          "execution_time": 0.4030489921569824,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f7_003",
+      "query_text": "A flight departs at 10 AM and arrives at 9 AM the same day. Is this possible without time zones?",
+      "expected_answer": "no",
+      "domain": "temporal",
+      "task_family": "f7_temporal_reasoning",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "no",
+          "execution_time": 0.2827298641204834,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "no",
+          "execution_time": 0.40674567222595215,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "no",
+          "execution_time": 0.23976874351501465,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f7_004",
+      "query_text": "Task A takes 3 hours. Task B takes 2 hours. Both must be done sequentially starting at 1 PM and finishing by 5 PM. Is this feasible?",
+      "expected_answer": "yes",
+      "domain": "temporal",
+      "task_family": "f7_temporal_reasoning",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "no",
+          "execution_time": 0.20466828346252441,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "no",
+          "execution_time": 0.4773068428039551,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "no",
+          "execution_time": 0.3345820903778076,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f7_005",
+      "query_text": "A process starts at 11:30 AM, takes 45 minutes, then another step takes 1 hour 20 minutes. Can it finish before 1:00 PM?",
+      "expected_answer": "no",
+      "domain": "temporal",
+      "task_family": "f7_temporal_reasoning",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "no",
+          "execution_time": 0.3825380802154541,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "no",
+          "execution_time": 0.5111188888549805,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "no",
+          "execution_time": 0.3368191719055176,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    }
+  ],
+  "accuracy": {
+    "LLM": 0.6,
+    "LLM+RAG": 0.8,
+    "RCE-LLM": 0.6
+  }
+}

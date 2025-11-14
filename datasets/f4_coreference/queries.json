@@ -1,0 +1,29 @@
+{
+  "task_family": "F4 - Coreference Resolution",
+  "description": "Winograd-style pronoun resolution tasks with consistency requirements",
+  "source": "Publication Section 5.1 (p. 11) - RCE_V5.1_published.pdf",
+  "queries": [
+    {
+      "id": "f4_001",
+      "query": "The trophy doesn't fit in the suitcase because it is too large. What is too large?",
+      "expected_answer": "the trophy",
+      "source": "Example from publication page 11",
+      "coherence_modules": ["mu_coref"]
+    },
+    {
+      "id": "f4_002",
+      "query": "Alice told Bob that she would help him. Who will help whom?",
+      "expected_answer": "Alice will help Bob",
+      "source": "Example from publication page 11",
+      "coherence_modules": ["mu_coref"]
+    },
+    {
+      "id": "f4_003",
+      "query": "The city councilmen refused the demonstrators a permit because they feared violence.",
+      "expected_answer": "the councilmen",
+      "source": "Winograd Schema Challenge",
+      "coherence_modules": ["mu_coref"]
+    }
+  ],
+  "total_queries": 3
+}

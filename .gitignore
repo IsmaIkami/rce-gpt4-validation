@@ -1,0 +1,133 @@
+# ==================================================================================
+# RCE-LLM EMPIRICAL VALIDATION - GITIGNORE
+# Author: Ismail Sialyen
+# Purpose: Protect proprietary RCE engine code from accidental exposure
+# ==================================================================================
+
+# CRITICAL: RCE Engine Source Code (MUST NEVER BE COMMITTED)
+# ==================================================================================
+# These directories contain proprietary algorithms and MUST remain private
+rce-backend/
+rce-deployment/
+rce-src/
+rce_core/
+src/rce/
+api/rce/
+**/rce_engine/**
+**/coherence_engine/**
+**/validation_layer/**
+**/proprietary/**
+
+# RCE Engine Implementation Files
+coherence_optimizer.py
+relationship_validator.py
+semantic_analyzer.py
+graph_builder.py
+cache_manager.py
+**/mu_*.py
+**/module_*.py
+
+# Configuration files that may contain API keys or internal URLs
+.env
+.env.local
+.env.*.local
+config/secrets.yml
+config/production.yml
+**/api_keys.json
+**/credentials.json
+
+# ==================================================================================
+# SAFE TO COMMIT (Benchmark harness only - black box API calls)
+# ==================================================================================
+# ✓ scripts/run_benchmarks.py          - Calls RCE API at http://localhost:8000
+# ✓ scripts/statistical_analysis.py    - Post-processing only
+# ✓ scripts/generate_results_page.py   - HTML generation only
+# ✓ datasets/                           - Query JSON files
+# ✓ results/                            - Benchmark output (JSON, logs)
+# ✓ docs/                               - Static HTML results page
+# ✓ README.md, LICENSE                  - Documentation
+
+# ==================================================================================
+# Development & Build Artifacts
+# ==================================================================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Logs (except benchmark result logs which are safe)
+*.log
+!results/*.log
+!benchmark_*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ==================================================================================
+# Verification Commands
+# ==================================================================================
+# To verify no proprietary code is tracked:
+#   git ls-files | grep -E "(rce-backend|rce-deployment|coherence_optimizer)"
+#
+# To check for accidentally staged secrets:
+#   git diff --cached --name-only | grep -E "(\.env|credentials|api_keys)"
+#
+# To audit repository for exposed algorithms:
+#   git log --all --full-history -- "**/mu_*.py" "**/coherence_engine/**"
+# ==================================================================================

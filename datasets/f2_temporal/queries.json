@@ -1,0 +1,101 @@
+{
+  "task_family": "F2 - Temporal Reasoning",
+  "description": "Time-based calculations involving scheduling, duration, and chronological ordering",
+  "source": "Publication Section 5.1 (p. 10) - RCE_V5.1_published.pdf",
+  "queries": [
+    {
+      "id": "f2_001",
+      "query": "Meeting starts 9:30 AM, lasts 2h 45min. When does it end?",
+      "domain": "temporal",
+      "expected_answer": "12:15 PM",
+      "ground_truth_value": "12:15",
+      "tolerance": "exact",
+      "source": "Example from publication page 10",
+      "validation_method": "exact_time_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_002",
+      "query": "Event A at 14:00, Event B 3 hours later. What time is Event B?",
+      "domain": "temporal",
+      "expected_answer": "17:00",
+      "ground_truth_value": "17:00",
+      "tolerance": "exact",
+      "source": "Temporal ordering example",
+      "validation_method": "exact_time_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_003",
+      "query": "Flight departs 08:15, arrives 13:40. Flight duration?",
+      "domain": "temporal",
+      "expected_answer": "5 hours 25 minutes",
+      "ground_truth_value": "5:25",
+      "tolerance": "exact",
+      "source": "Example from publication page 10",
+      "validation_method": "duration_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_004",
+      "query": "Train leaves at 06:45 AM and takes 3 hours 30 minutes. Arrival time?",
+      "domain": "temporal",
+      "expected_answer": "10:15 AM",
+      "ground_truth_value": "10:15",
+      "tolerance": "exact",
+      "source": "Duration calculation",
+      "validation_method": "exact_time_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_005",
+      "query": "If a task starts at 15:20 and ends at 18:05, how long did it take?",
+      "domain": "temporal",
+      "expected_answer": "2 hours 45 minutes",
+      "ground_truth_value": "2:45",
+      "tolerance": "exact",
+      "source": "Temporal reasoning",
+      "validation_method": "duration_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_006",
+      "query": "Conference session 1 at 09:00 (90 min), break (30 min), session 2. When does session 2 start?",
+      "domain": "temporal",
+      "expected_answer": "11:00 AM",
+      "ground_truth_value": "11:00",
+      "tolerance": "exact",
+      "source": "Sequential temporal events",
+      "validation_method": "exact_time_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_007",
+      "query": "Movie starts 19:45, runs for 2 hours 18 minutes. When does it end?",
+      "domain": "temporal",
+      "expected_answer": "22:03",
+      "ground_truth_value": "22:03",
+      "tolerance": "exact",
+      "source": "Time calculation with minutes",
+      "validation_method": "exact_time_matching",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    },
+    {
+      "id": "f2_008",
+      "query": "Between 13:30 and 16:15, how many minutes pass?",
+      "domain": "temporal",
+      "expected_answer": "165 minutes",
+      "ground_truth_value": 165,
+      "tolerance": 0.01,
+      "source": "Duration in minutes",
+      "validation_method": "numerical_accuracy",
+      "coherence_modules": ["mu_time", "mu_arith"]
+    }
+  ],
+  "total_queries": 8,
+  "validation_criteria": {
+    "metric": "exact_temporal_correctness",
+    "tolerance": "exact_time_duration_matching",
+    "coherence_threshold": 0.90
+  }
+}

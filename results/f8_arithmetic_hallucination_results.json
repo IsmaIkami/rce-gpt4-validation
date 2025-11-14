@@ -1,0 +1,236 @@
+{
+  "task_family": "f8_arithmetic_hallucination",
+  "total_queries": 5,
+  "queries": [
+    {
+      "query_id": "f8_001",
+      "query_text": "Start with 1000. Add 234. Multiply by 3. Subtract 1500. Divide by 2. What's the result?",
+      "expected_answer": "102",
+      "domain": "arithmetic",
+      "task_family": "f8_arithmetic_hallucination",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "1101",
+          "execution_time": 0.2783839702606201,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "1101",
+          "execution_time": 0.24410176277160645,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "1101",
+          "execution_time": 0.24619531631469727,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f8_002",
+      "query_text": "Calculate: (456 + 789) \u00d7 2 - 300 \u00f7 5",
+      "expected_answer": "2430",
+      "domain": "arithmetic",
+      "task_family": "f8_arithmetic_hallucination",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "2430",
+          "execution_time": 0.23307299613952637,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "2430",
+          "execution_time": 0.29800868034362793,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "2430",
+          "execution_time": 0.33202290534973145,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f8_003",
+      "query_text": "If 25% of X is 150, what is 75% of X?",
+      "expected_answer": "450",
+      "domain": "arithmetic",
+      "task_family": "f8_arithmetic_hallucination",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "450",
+          "execution_time": 0.28532886505126953,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "450",
+          "execution_time": 0.3039970397949219,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "450",
+          "execution_time": 0.33289027214050293,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f8_004",
+      "query_text": "A store marks up items by 40%, then offers a 30% discount. What is the effective price change on a $100 item?",
+      "expected_answer": "98",
+      "domain": "arithmetic",
+      "task_family": "f8_arithmetic_hallucination",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4028952121734619,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.41753172874450684,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "The final",
+          "execution_time": 0.5284926891326904,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f8_005",
+      "query_text": "What is 15% of 80 plus 20% of 60 minus 10% of 40?",
+      "expected_answer": "20",
+      "domain": "arithmetic",
+      "task_family": "f8_arithmetic_hallucination",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "20",
+          "execution_time": 0.36554384231567383,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "20",
+          "execution_time": 0.4098939895629883,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "20",
+          "execution_time": 0.29935479164123535,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    }
+  ],
+  "accuracy": {
+    "LLM": 0.6,
+    "LLM+RAG": 0.6,
+    "RCE-LLM": 0.6
+  }
+}

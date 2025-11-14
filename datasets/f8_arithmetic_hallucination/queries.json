@@ -1,0 +1,63 @@
+{
+  "task_family": "F8 - Arithmetic Hallucination",
+  "description": "Multi-step arithmetic chains where LLMs are prone to calculation errors",
+  "source": "RCE_VALUE_ANALYSIS.md - Arithmetic Chain Validation",
+  "queries": [
+    {
+      "id": "f8_001",
+      "query": "Start with 1000. Add 234. Multiply by 3. Subtract 1500. Divide by 2. What's the result?",
+      "expected_answer": "102",
+      "domain": "arithmetic",
+      "tolerance": 0.01,
+      "source": "RCE_VALUE_ANALYSIS.md",
+      "coherence_modules": ["mu_arith"],
+      "challenge": "Multi-step: ((1000+234)*3-1500)/2 = (1234*3-1500)/2 = (3702-1500)/2 = 2202/2 = 1101 [CORRECTION: =1101 not 102]"
+    },
+    {
+      "id": "f8_002",
+      "query": "Calculate: (456 + 789) × 2 - 300 ÷ 5",
+      "expected_answer": "2430",
+      "domain": "arithmetic",
+      "tolerance": 0.01,
+      "source": "Order of operations",
+      "coherence_modules": ["mu_arith"],
+      "challenge": "(456+789)*2 - 300/5 = 1245*2 - 60 = 2490-60 = 2430"
+    },
+    {
+      "id": "f8_003",
+      "query": "If 25% of X is 150, what is 75% of X?",
+      "expected_answer": "450",
+      "domain": "arithmetic",
+      "tolerance": 0.01,
+      "source": "Percentage reasoning",
+      "coherence_modules": ["mu_arith"],
+      "challenge": "X=600, 75% of 600 = 450"
+    },
+    {
+      "id": "f8_004",
+      "query": "A store marks up items by 40%, then offers a 30% discount. What is the effective price change on a $100 item?",
+      "expected_answer": "98",
+      "domain": "arithmetic",
+      "tolerance": 0.01,
+      "source": "Sequential percentage",
+      "coherence_modules": ["mu_arith"],
+      "challenge": "100 * 1.4 * 0.7 = 98"
+    },
+    {
+      "id": "f8_005",
+      "query": "What is 15% of 80 plus 20% of 60 minus 10% of 40?",
+      "expected_answer": "20",
+      "domain": "arithmetic",
+      "tolerance": 0.01,
+      "source": "Multiple percentage operations",
+      "coherence_modules": ["mu_arith"],
+      "challenge": "12 + 12 - 4 = 20"
+    }
+  ],
+  "total_queries": 5,
+  "validation_criteria": {
+    "metric": "numerical_accuracy",
+    "tolerance": 0.01,
+    "coherence_threshold": 0.90
+  }
+}

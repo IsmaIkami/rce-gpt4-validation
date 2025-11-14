@@ -1,0 +1,63 @@
+{
+  "task_family": "F9 - Noisy RAG",
+  "description": "Queries where retrieval returns irrelevant or partially relevant information",
+  "source": "RCE_VALUE_ANALYSIS.md - Noisy Retrieval Scenarios",
+  "queries": [
+    {
+      "id": "f9_001",
+      "query": "What is the population of Mars in 2024?",
+      "expected_answer": "0",
+      "domain": "factual",
+      "tolerance": "exact",
+      "source": "RCE_VALUE_ANALYSIS.md - Source Entailment Validation",
+      "coherence_modules": ["mu_entail"],
+      "challenge": "RAG might return Mars facts without population data, LLM should abstain or state 0"
+    },
+    {
+      "id": "f9_002",
+      "query": "Who won the Nobel Prize in Physics in 2030?",
+      "expected_answer": "unknown",
+      "domain": "factual",
+      "tolerance": "exact",
+      "source": "Future event hallucination",
+      "coherence_modules": ["mu_entail"],
+      "challenge": "Future event - should abstain or state unknown"
+    },
+    {
+      "id": "f9_003",
+      "query": "What is the exact height of Mount Everest in nanometers?",
+      "expected_answer": "8848870000000",
+      "domain": "units",
+      "tolerance": 0.01,
+      "source": "Unit conversion with extreme precision",
+      "coherence_modules": ["mu_units", "mu_arith"],
+      "challenge": "8848.87m = 8848870000000nm - precision hallucination risk"
+    },
+    {
+      "id": "f9_004",
+      "query": "According to the Constitution, what is the minimum age to become President of Mars?",
+      "expected_answer": "undefined",
+      "domain": "factual",
+      "tolerance": "exact",
+      "source": "Non-existent entity",
+      "coherence_modules": ["mu_entail"],
+      "challenge": "Mars has no constitution - should recognize nonsensical query"
+    },
+    {
+      "id": "f9_005",
+      "query": "How many moons does Earth have that are larger than 1000km in diameter?",
+      "expected_answer": "1",
+      "domain": "factual",
+      "tolerance": "exact",
+      "source": "Specific factual constraint",
+      "coherence_modules": ["mu_entail"],
+      "challenge": "Earth has 1 moon (The Moon, ~3474km diameter)"
+    }
+  ],
+  "total_queries": 5,
+  "validation_criteria": {
+    "metric": "entailment_accuracy",
+    "tolerance": "abstention_or_correct",
+    "coherence_threshold": 0.70
+  }
+}
