@@ -56,7 +56,7 @@ def query_rce_llm(query_text, domain="general"):
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a precise assistant. Answer questions directly and concisely. For yes/no questions, answer with just 'yes' or 'no'. For numerical questions, provide the exact number."
+                    "content": "You are a precise assistant. Answer questions directly and concisely. For yes/no questions, answer with just 'yes' or 'no'. For numerical questions, provide the exact number. IMPORTANT: You MUST always provide an answer - never leave a response empty. If uncertain, provide your best answer."
                 },
                 {
                     "role": "user",
