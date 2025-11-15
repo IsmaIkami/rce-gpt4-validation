@@ -610,40 +610,22 @@
         </section>
 
         <section class="metadata">
-            <h2>Cloud Resource Usage (Groq API)</h2>
-            <div class="metadata-grid">
-                <div class="metadata-item">
-                    <strong>Total API Calls</strong>
-                    150 calls (75 queries across 3 systems)
-                </div>
-                <div class="metadata-item">
-                    <strong>Total Tokens</strong>
-                    18,161 tokens
-                </div>
-                <div class="metadata-item">
-                    <strong>Prompt Tokens</strong>
-                    10,420 tokens
-                </div>
-                <div class="metadata-item">
-                    <strong>Completion Tokens</strong>
-                    7,741 tokens
-                </div>
-                <div class="metadata-item">
-                    <strong>Execution Time</strong>
-                    1.2 minutes total
-                </div>
-                <div class="metadata-item">
-                    <strong>Cost Efficiency</strong>
-                    ~$0.01-0.02 estimated cost via Groq
-                </div>
-            </div>
+            <h2>Research Methodology & Limitations</h2>
 
-            <h3 style="margin-top: 20px;">Resource Comparison: Local vs Cloud</h3>
+            <h3>Experimental Setup</h3>
             <ul style="list-style-position: inside; line-height: 2;">
-                <li><strong>Llama 70B (Local Ollama):</strong> Zero cloud costs, local compute resources only</li>
-                <li><strong>GPT-4 120B (Groq API):</strong> 18,161 tokens total, minimal cloud cost (~$0.01-0.02)</li>
-                <li><strong>Speed Advantage:</strong> Groq API averages 0.2-1.5s per query vs Llama local execution</li>
-                <li><strong>Trade-off:</strong> Groq offers fast cloud inference at low cost vs Llama's zero-cost local deployment</li>
+                <li><strong>Model Tested:</strong> GPT-4 120B via Groq API (baseline responses)</li>
+                <li><strong>Validation Approach:</strong> Graph-based coherence checking post-generation</li>
+                <li><strong>Query Set:</strong> 25 carefully designed F11 queries eliciting logical hallucinations</li>
+                <li><strong>Evaluation:</strong> Binary classification (hallucination detected / not detected)</li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">Known Limitations</h3>
+            <ul style="list-style-position: inside; line-height: 2;">
+                <li><strong>Coverage:</strong> 5/25 queries remain challenging for current prototype (20% error rate)</li>
+                <li><strong>Scope:</strong> Focuses on structural coherence, not factual accuracy or world knowledge</li>
+                <li><strong>Validation Type:</strong> Post-generation checking only, not integrated into generation process</li>
+                <li><strong>Generalization:</strong> Results specific to query types tested, broader applicability requires further validation</li>
             </ul>
         </section>
 
