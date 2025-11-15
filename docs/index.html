@@ -217,6 +217,41 @@
             background: var(--danger-color);
             color: white;
         }
+
+        .results-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .results-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .reproduction {
+            background: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid var(--warning-color);
+            margin: 20px 0;
+        }
+
+        .reproduction h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
+        code {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
     </style>
 </head>
 <body>
@@ -629,11 +664,65 @@
             </ul>
         </section>
 
+        <!-- Reproduction Information -->
+        <div class="results-section">
+            <h2>Reproduction Instructions</h2>
+            <div class="reproduction">
+                <h3>How to Reproduce These Results</h3>
+                <p>To reproduce the GPT-4 120B validation benchmark:</p>
+                <ol style="margin-left: 20px; line-height: 2; margin-top: 10px;">
+                    <li>Clone repository: <code>gh repo clone IsmaIkami/rce-gpt4-validation</code></li>
+                    <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+                    <li>Start RCE API: <code>cd rce-deployment-v0.1.5-api && python main.py</code></li>
+                    <li>Set Groq API key: <code>export GROQ_API_KEY="your_groq_api_key"</code></li>
+                    <li>Run benchmark: <code>python3 scripts/run_benchmarks.py</code></li>
+                </ol>
+                <p style="margin-top: 15px;"><strong>Results location:</strong> <code>results/benchmark_results.json</code> (50 queries across F6-F11, 150 total system responses)</p>
+                <p style="margin-top: 10px;"><strong>Model:</strong> GPT-4 120B accessed via Groq API (<code>openai/gpt-oss-120b</code>)</p>
+                <p style="margin-top: 10px;"><strong>Execution time:</strong> ~2-3 minutes for complete benchmark suite</p>
+            </div>
+        </div>
+
+        <!-- Download Links -->
+        <div class="results-section">
+            <h2>Raw Data Access for Peer Review</h2>
+            <p>Complete results and logs available for verification and reproduction:</p>
+            <ul style="margin: 20px 0; line-height: 2;">
+                <li><a href="f6_contradictory_reasoning_results.json" download>f6_contradictory_reasoning_results.json</a> - F6 detailed results (5 queries)</li>
+                <li><a href="f7_temporal_reasoning_results.json" download>f7_temporal_reasoning_results.json</a> - F7 detailed results (5 queries)</li>
+                <li><a href="f8_arithmetic_hallucination_results.json" download>f8_arithmetic_hallucination_results.json</a> - F8 detailed results (5 queries)</li>
+                <li><a href="f9_noisy_rag_results.json" download>f9_noisy_rag_results.json</a> - F9 detailed results (5 queries)</li>
+                <li><a href="f10_confidence_calibration_results.json" download>f10_confidence_calibration_results.json</a> - F10 detailed results (5 queries)</li>
+                <li><a href="f11_truthfulqa_misconceptions_results.json" download>f11_truthfulqa_misconceptions_results.json</a> - F11 detailed results (25 queries)</li>
+                <li><a href="benchmark_GPT4_COMPLETE.log" download>benchmark_GPT4_COMPLETE.log</a> - Complete execution log with all queries and responses</li>
+                <li><a href="usage_report.json" download>usage_report.json</a> - Groq API token usage statistics</li>
+            </ul>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="results-section">
+            <h2>Quick Actions</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <a href="https://github.com/IsmaIkami/rce-gpt4-validation" target="_blank" style="display: block; padding: 20px; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; transition: background 0.3s;">
+                    📁 View Repository
+                </a>
+                <a href="https://doi.org/10.5281/zenodo.17360372" target="_blank" style="display: block; padding: 20px; background: var(--success-color); color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; transition: background 0.3s;">
+                    📄 Publication (DOI)
+                </a>
+                <a href="f11_truthfulqa_misconceptions_results.json" download style="display: block; padding: 20px; background: var(--warning-color); color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; transition: background 0.3s;">
+                    💾 Download F11 Results
+                </a>
+                <a href="https://ismaikami.github.io/rce-llm-empirical-validation" target="_blank" style="display: block; padding: 20px; background: #9b59b6; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; transition: background 0.3s;">
+                    🔬 Llama 70B Benchmark
+                </a>
+            </div>
+        </div>
+
         <footer>
             <p><strong>RCE-GPT-4 Empirical Validation</strong></p>
-            <p>Generated on 2025-11-14 21:29:30</p>
+            <p>Generated on 2025-11-15 | Model: GPT-4 120B via Groq</p>
             <p>Author: Ismail Sialyen | DOI: 10.5281/zenodo.17360372</p>
-            <p><a href="https://github.com/IsmaIkami">GitHub</a> | <a href="https://ismaikami.github.io/rce-llm-empirical-validation">Llama 70B Benchmark</a></p>
+            <p><a href="https://github.com/IsmaIkami/rce-gpt4-validation" target="_blank">GitHub Repository</a> | <a href="https://ismaikami.github.io/rce-llm-empirical-validation" target="_blank">Llama 70B Benchmark</a></p>
         </footer>
     </div>
 </body>
