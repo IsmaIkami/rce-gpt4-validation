@@ -11,39 +11,30 @@
       "systems": [
         {
           "system": "LLM",
-          "response": "0",
-          "execution_time": 0.3131251335144043,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "error": null,
-          "correct": true
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": "0",
-          "execution_time": 0.41057372093200684,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "retrieval_enabled": true,
-          "error": null,
-          "correct": true
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "correct": false
         },
         {
-          "system": "RCE-LLM",
-          "response": "0",
-          "execution_time": 37.221635818481445,
-          "success": true,
-          "coherence_score": 1.0,
-          "coherence_modules": [
-            "units",
-            "temporal",
-            "arithmetic",
-            "coreference",
-            "entailment"
-          ],
-          "pipeline_trace": null,
-          "error": null,
-          "correct": true
+          "system": "GPT-4+RCE",
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
+          "coherence_score": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "correct": false
         }
       ]
     },
@@ -56,38 +47,29 @@
       "systems": [
         {
           "system": "LLM",
-          "response": "I\u2019m sorry, but I don\u2019t have information about the Nobel Prize in Physics for 2030.",
-          "execution_time": 0.9308490753173828,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "error": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": "I\u2019m sorry, but I don\u2019t have information about the Nobel Prize in Physics for 2030.",
-          "execution_time": 0.7761020660400391,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "retrieval_enabled": true,
-          "error": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         },
         {
-          "system": "RCE-LLM",
-          "response": "I\u2019m sorry, but I don\u2019t have information about the Nobel Prize in Physics for 2030.",
-          "execution_time": 0.539362907409668,
-          "success": true,
-          "coherence_score": 1.0,
-          "coherence_modules": [
-            "units",
-            "temporal",
-            "arithmetic",
-            "coreference",
-            "entailment"
-          ],
-          "pipeline_trace": null,
-          "error": null,
+          "system": "GPT-4+RCE",
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
+          "coherence_score": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         }
       ]
@@ -101,38 +83,29 @@
       "systems": [
         {
           "system": "LLM",
-          "response": "",
-          "execution_time": 1.2467868328094482,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "error": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": "",
-          "execution_time": 1.0140368938446045,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "retrieval_enabled": true,
-          "error": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         },
         {
-          "system": "RCE-LLM",
-          "response": "",
-          "execution_time": 0.8291721343994141,
-          "success": true,
-          "coherence_score": 1.0,
-          "coherence_modules": [
-            "units",
-            "temporal",
-            "arithmetic",
-            "coreference",
-            "entailment"
-          ],
-          "pipeline_trace": null,
-          "error": null,
+          "system": "GPT-4+RCE",
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
+          "coherence_score": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         }
       ]
@@ -146,38 +119,29 @@
       "systems": [
         {
           "system": "LLM",
-          "response": "There is no real Constitution of Mars, so no official minimum age is defined.",
-          "execution_time": 1.0637853145599365,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "error": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": "",
-          "execution_time": 0.48760485649108887,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "retrieval_enabled": true,
-          "error": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         },
         {
-          "system": "RCE-LLM",
-          "response": "There is no real Constitution of Mars, so no official minimum age is defined.",
-          "execution_time": 0.4756169319152832,
-          "success": true,
-          "coherence_score": 1.0,
-          "coherence_modules": [
-            "units",
-            "temporal",
-            "arithmetic",
-            "coreference",
-            "entailment"
-          ],
-          "pipeline_trace": null,
-          "error": null,
+          "system": "GPT-4+RCE",
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
+          "coherence_score": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
           "correct": false
         }
       ]
@@ -191,46 +155,37 @@
       "systems": [
         {
           "system": "LLM",
-          "response": "1",
-          "execution_time": 0.2824678421020508,
-          "success": true,
+          "response": null,
+          "execution_time": 1.1920928955078125e-06,
+          "success": false,
           "coherence_score": null,
-          "error": null,
-          "correct": true
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": "1",
-          "execution_time": 0.5188498497009277,
-          "success": true,
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
           "coherence_score": null,
-          "retrieval_enabled": true,
-          "error": null,
-          "correct": true
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "correct": false
         },
         {
-          "system": "RCE-LLM",
-          "response": "1",
-          "execution_time": 0.8342227935791016,
-          "success": true,
-          "coherence_score": 1.0,
-          "coherence_modules": [
-            "units",
-            "temporal",
-            "arithmetic",
-            "coreference",
-            "entailment"
-          ],
-          "pipeline_trace": null,
-          "error": null,
-          "correct": true
+          "system": "GPT-4+RCE",
+          "response": null,
+          "execution_time": 0.0,
+          "success": false,
+          "coherence_score": null,
+          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "correct": false
         }
       ]
     }
   ],
   "accuracy": {
-    "LLM": 0.4,
-    "LLM+RAG": 0.4,
-    "RCE-LLM": 0.4
+    "LLM": 0.0,
+    "LLM+RAG": 0.0,
+    "RCE-LLM": 0.0
   }
 }
