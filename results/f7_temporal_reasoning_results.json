@@ -12,7 +12,7 @@
         {
           "system": "LLM",
           "response": "yes",
-          "execution_time": 0.4894568920135498,
+          "execution_time": 2.531581163406372,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -20,18 +20,18 @@
         },
         {
           "system": "LLM+RAG",
-          "response": "no",
-          "execution_time": 0.40634703636169434,
+          "response": "",
+          "execution_time": 2.460702419281006,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
           "error": null,
-          "correct": true
+          "correct": false
         },
         {
           "system": "RCE-LLM",
           "response": "yes",
-          "execution_time": 0.41143798828125,
+          "execution_time": 2.466754913330078,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -39,7 +39,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -57,7 +58,7 @@
         {
           "system": "LLM",
           "response": "no",
-          "execution_time": 0.2526671886444092,
+          "execution_time": 2.447568893432617,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -66,7 +67,7 @@
         {
           "system": "LLM+RAG",
           "response": "no",
-          "execution_time": 0.39295172691345215,
+          "execution_time": 2.443995952606201,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -76,7 +77,7 @@
         {
           "system": "RCE-LLM",
           "response": "no",
-          "execution_time": 0.4030489921569824,
+          "execution_time": 2.425902843475342,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -84,7 +85,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -102,7 +104,7 @@
         {
           "system": "LLM",
           "response": "no",
-          "execution_time": 0.2827298641204834,
+          "execution_time": 2.5122108459472656,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -111,7 +113,7 @@
         {
           "system": "LLM+RAG",
           "response": "no",
-          "execution_time": 0.40674567222595215,
+          "execution_time": 2.421839952468872,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -121,7 +123,7 @@
         {
           "system": "RCE-LLM",
           "response": "no",
-          "execution_time": 0.23976874351501465,
+          "execution_time": 2.28374981880188,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -129,7 +131,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -147,7 +150,7 @@
         {
           "system": "LLM",
           "response": "no",
-          "execution_time": 0.20466828346252441,
+          "execution_time": 2.3885488510131836,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -156,7 +159,7 @@
         {
           "system": "LLM+RAG",
           "response": "no",
-          "execution_time": 0.4773068428039551,
+          "execution_time": 2.447558879852295,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -166,7 +169,7 @@
         {
           "system": "RCE-LLM",
           "response": "no",
-          "execution_time": 0.3345820903778076,
+          "execution_time": 2.357606887817383,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -174,7 +177,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -192,7 +196,7 @@
         {
           "system": "LLM",
           "response": "no",
-          "execution_time": 0.3825380802154541,
+          "execution_time": 2.365391731262207,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -201,7 +205,7 @@
         {
           "system": "LLM+RAG",
           "response": "no",
-          "execution_time": 0.5111188888549805,
+          "execution_time": 2.3673059940338135,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -211,15 +215,16 @@
         {
           "system": "RCE-LLM",
           "response": "no",
-          "execution_time": 0.3368191719055176,
+          "execution_time": 2.37432599067688,
           "success": true,
-          "coherence_score": 1.0,
+          "coherence_score": 0.9999999999999999,
           "coherence_modules": [
             "units",
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -230,7 +235,7 @@
   ],
   "accuracy": {
     "LLM": 0.6,
-    "LLM+RAG": 0.8,
+    "LLM+RAG": 0.6,
     "RCE-LLM": 0.6
   }
 }

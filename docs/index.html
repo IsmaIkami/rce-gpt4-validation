@@ -217,41 +217,6 @@
             background: var(--danger-color);
             color: white;
         }
-
-        .results-section {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .results-section h2 {
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .reproduction {
-            background: #fff3cd;
-            padding: 20px;
-            border-left: 4px solid var(--warning-color);
-            margin: 20px 0;
-        }
-
-        .reproduction h3 {
-            color: #856404;
-            margin-bottom: 15px;
-        }
-
-        code {
-            background: var(--primary-color);
-            color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-        }
     </style>
 </head>
 <body>
@@ -273,7 +238,7 @@
                 </div>
                 <div class="metadata-item">
                     <strong>Execution Date</strong>
-                    2025-11-14
+                    2025-11-15
                 </div>
                 <div class="metadata-item">
                     <strong>Total Queries</strong>
@@ -290,7 +255,7 @@
         <div class="summary-cards">
             <div class="card">
                 <h3>LLM (GPT-4 Baseline)</h3>
-                <div class="value" style="color: var(--warning-color);">42.0%</div>
+                <div class="value" style="color: var(--warning-color);">40.0%</div>
                 <p>Standalone GPT-4 120B (no RCE)</p>
             </div>
             <div class="card">
@@ -300,7 +265,7 @@
             </div>
             <div class="card">
                 <h3>RCE-LLM (GPT-4 + RCE)</h3>
-                <div class="value" style="color: var(--success-color);">42.0%</div>
+                <div class="value" style="color: var(--success-color);">40.0%</div>
                 <p>GPT-4 120B with RCE validation</p>
             </div>
         </div>
@@ -327,11 +292,11 @@
                 <div class="accuracy-bar">
                     <div class="accuracy-bar-label">
                         <span>LLM+RAG (GPT-4 + Retrieval)</span>
-                        <span>60.0%</span>
+                        <span>80.0%</span>
                     </div>
                     <div class="accuracy-bar-container">
-                        <div class="accuracy-bar-fill" style="width: 60.0%">
-                            60.0%
+                        <div class="accuracy-bar-fill" style="width: 80.0%">
+                            80.0%
                         </div>
                     </div>
                 </div>
@@ -370,11 +335,11 @@
                 <div class="accuracy-bar">
                     <div class="accuracy-bar-label">
                         <span>LLM+RAG (GPT-4 + Retrieval)</span>
-                        <span>80.0%</span>
+                        <span>60.0%</span>
                     </div>
                     <div class="accuracy-bar-container">
-                        <div class="accuracy-bar-fill" style="width: 80.0%">
-                            80.0%
+                        <div class="accuracy-bar-fill" style="width: 60.0%">
+                            60.0%
                         </div>
                     </div>
                 </div>
@@ -523,19 +488,18 @@
         </div>
 
         <div class="task-family">
-            <h3>F11 TruthfulQA Misconceptions - Logical Hallucination Detection</h3>
-            <p><strong>Research Focus:</strong> 25 queries designed to elicit logical hallucinations in multi-step reasoning</p>
-            <p style="margin-top: 10px; color: #666; font-size: 0.95em;"><strong>Query Types:</strong> Multi-step arithmetic with conditional logic, temporal constraint satisfaction, ratio/probability problems, logical inference chains</p>
+            <h3>F11 Truthfulqa Misconceptions</h3>
+            <p><strong>Total Queries:</strong> 25</p>
 
             <div class="accuracy-bars">
                 <div class="accuracy-bar">
                     <div class="accuracy-bar-label">
                         <span>LLM (GPT-4 Baseline)</span>
-                        <span>16.0%</span>
+                        <span>12.0%</span>
                     </div>
                     <div class="accuracy-bar-container">
-                        <div class="accuracy-bar-fill" style="width: 16.0%">
-                            16.0%
+                        <div class="accuracy-bar-fill" style="width: 12.0%">
+                            12.0%
                         </div>
                     </div>
                 </div>
@@ -554,113 +518,114 @@
 
                 <div class="accuracy-bar">
                     <div class="accuracy-bar-label">
-                        <span>RCE-LLM (Coherence Validation Prototype)</span>
-                        <span style="color: #27ae60; font-weight: bold;">80.0%</span>
+                        <span>RCE-LLM (GPT-4 + RCE)</span>
+                        <span>12.0%</span>
                     </div>
                     <div class="accuracy-bar-container">
-                        <div class="accuracy-bar-fill" style="width: 80.0%; background: linear-gradient(90deg, #27ae60, #229954);">
-                            80.0%
+                        <div class="accuracy-bar-fill" style="width: 12.0%">
+                            12.0%
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 5px; margin-top: 20px; border-left: 4px solid #3498db;">
-                <h4 style="color: #3498db; margin-top: 0; margin-bottom: 15px;">Validation Results for Peer Review</h4>
-                <p style="margin-bottom: 10px;"><strong>Detected Hallucination Types:</strong></p>
-                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.8;">
-                    <li><strong>Arithmetic Errors:</strong> Multi-step calculation failures, conditional logic misapplication</li>
-                    <li><strong>Logical Fallacies:</strong> Invalid inference chains, affirming the consequent, denying the antecedent</li>
-                    <li><strong>Temporal Inconsistencies:</strong> Constraint violation, scheduling conflicts, time calculation errors</li>
-                    <li><strong>Ratio/Probability Confusion:</strong> P(A|B) vs ratio misinterpretation, percentage chain errors</li>
-                </ul>
-                <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;"><strong>Research Finding:</strong> RCE coherence validation detects 4-5× more logical hallucinations than baseline LLM, with particular effectiveness on queries requiring multi-step reasoning and constraint satisfaction.</p>
-            </div>
-
-            <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin-top: 15px; border-left: 4px solid #f39c12;">
-                <strong style="color: #856404;">Prototype Limitations:</strong> Current implementation focuses on structural coherence validation. Not all query types are covered (5/25 queries remain challenging). Results represent research validation, not production deployment.
-            </div>
         </div>
 
         <section class="metadata">
-            <h2>Key Findings for Peer Review</h2>
+            <h2>Key Findings</h2>
             <ul style="list-style-position: inside; line-height: 2;">
-                <li><strong>Logical Hallucination Detection:</strong> RCE identifies 4-5× more reasoning errors than baseline LLM in complex multi-step queries (F11: 80% vs 16-20%)</li>
-                <li><strong>Validation Mechanism:</strong> Graph-based coherence checking detects arithmetic errors, logical fallacies, and temporal constraint violations overlooked by standard LLM outputs</li>
-                <li><strong>Multi-Step Reasoning Performance:</strong> 20/25 queries with conditional logic and multi-hop inference correctly validated</li>
-                <li><strong>Prototype Scope:</strong> F11 (complex reasoning) demonstrates core capability; F6-F10 show baseline coherence validation (42% average)</li>
-                <li><strong>Inference Efficiency:</strong> 0.2-1.5s per query validation via Groq API, enabling real-time coherence checking</li>
-                <li><strong>Research Validation:</strong> Results based on empirical testing with GPT-4 120B baseline responses, focusing on structural coherence rather than factual accuracy</li>
+                <li><strong>GPT-4 120B Model:</strong> Tested via Groq API (openai/gpt-oss-120b)</li>
+                <li><strong>Three-System Comparison:</strong> LLM baseline vs LLM+RAG vs RCE-LLM</li>
+                <li><strong>Execution Speed:</strong> Fast inference (0.2-1.5s per query via Groq)</li>
+                <li><strong>Overall RCE-LLM Accuracy:</strong> 40.0% across all F6-F11 tasks</li>
+                <li><strong>Best Performance:</strong> RCE-LLM system</li>
             </ul>
         </section>
 
         <section class="metadata">
-            <h2>F11 Hallucination Detection: Query Examples</h2>
-            <p style="margin-bottom: 20px;">Representative examples demonstrating RCE's detection of logical hallucinations in complex reasoning:</p>
+            <h2>Cross-Model Comparison: Llama 70B vs GPT-4 120B</h2>
+            <p style="margin-bottom: 20px;">Direct comparison of identical benchmarks across two foundation models demonstrates how RCE validation performs across different LLM architectures.</p>
 
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>Query Type</th>
-                        <th>Hallucination Pattern</th>
-                        <th>RCE Detection Method</th>
-                        <th>RCE Effectiveness</th>
+                        <th>System</th>
+                        <th>Llama 70B (Local)</th>
+                        <th>GPT-4 120B (Groq)</th>
+                        <th>Δ Difference</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Multi-Step Arithmetic</strong></td>
-                        <td>Conditional logic misapplication, tracking errors across operations</td>
-                        <td>Graph-based computation verification</td>
-                        <td style="color: var(--success-color); font-weight: bold;">High (64% improved)</td>
+                        <td><strong>LLM Baseline</strong></td>
+                        <td>52.0%</td>
+                        <td>40.0%</td>
+                        <td style="color: var(--danger-color)">
+                            -12.0%
+                        </td>
                     </tr>
                     <tr>
-                        <td><strong>Temporal Constraints</strong></td>
-                        <td>Scheduling conflicts, time calculation errors, constraint violations</td>
-                        <td>Temporal coherence module</td>
-                        <td style="color: var(--success-color); font-weight: bold;">High (60% improved)</td>
+                        <td><strong>LLM+RAG</strong></td>
+                        <td>36.0%</td>
+                        <td>40.0%</td>
+                        <td style="color: var(--success-color)">
+                            +4.0%
+                        </td>
                     </tr>
                     <tr>
-                        <td><strong>Logical Fallacies</strong></td>
-                        <td>Invalid inference chains, affirming consequent, denying antecedent</td>
-                        <td>Logic engine with fallacy detection</td>
-                        <td style="color: var(--success-color); font-weight: bold;">High (68% improved)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Ratio/Probability</strong></td>
-                        <td>Confusing P(A|B) with ratios, percentage chain calculation errors</td>
-                        <td>Ratio solver with probability filtering</td>
-                        <td style="color: var(--success-color); font-weight: bold;">Medium (52% improved)</td>
+                        <td><strong>RCE-LLM</strong></td>
+                        <td>72.0%</td>
+                        <td>40.0%</td>
+                        <td style="color: var(--danger-color)">
+                            -32.0%
+                        </td>
                     </tr>
                 </tbody>
             </table>
 
-            <h3 style="margin-top: 30px;">RCE Coherence Validation: F11 Performance</h3>
+            <h3 style="margin-top: 30px;">How RCE Helps Both Models</h3>
             <ul style="list-style-position: inside; line-height: 2;">
-                <li><strong>Overall Detection Rate:</strong> 80% of queries with logical hallucinations correctly identified (vs 16% baseline)</li>
-                <li><strong>Multi-Step Reasoning:</strong> 20/25 queries with conditional logic and multi-hop inference validated</li>
-                <li><strong>False Positive Control:</strong> Prototype correctly identifies "No/Invalid" answers without flagging correct responses</li>
-                <li><strong>Validation Speed:</strong> 0.2-1.5s per query enables real-time coherence checking</li>
+                <li><strong>Llama 70B with RCE:</strong> +20.0% improvement over baseline (52.0% → 72.0%)</li>
+                <li><strong>GPT-4 120B with RCE:</strong> +0.0% improvement over baseline (40.0% → 40.0%)</li>
+                <li><strong>Consistency:</strong> RCE provides model-specific optimization across different architectures</li>
+                <li><strong>RAG Impact:</strong> GPT-4 shows better RAG performance than Llama (40.0% vs 36.0%)</li>
             </ul>
         </section>
 
         <section class="metadata">
-            <h2>Research Methodology & Limitations</h2>
+            <h2>Cloud Resource Usage (Groq API)</h2>
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <strong>Total API Calls</strong>
+                    150 calls (75 queries across 3 systems)
+                </div>
+                <div class="metadata-item">
+                    <strong>Total Tokens</strong>
+                    18,161 tokens
+                </div>
+                <div class="metadata-item">
+                    <strong>Prompt Tokens</strong>
+                    10,420 tokens
+                </div>
+                <div class="metadata-item">
+                    <strong>Completion Tokens</strong>
+                    7,741 tokens
+                </div>
+                <div class="metadata-item">
+                    <strong>Execution Time</strong>
+                    1.2 minutes total
+                </div>
+                <div class="metadata-item">
+                    <strong>Cost Efficiency</strong>
+                    ~$0.01-0.02 estimated cost via Groq
+                </div>
+            </div>
 
-            <h3>Experimental Setup</h3>
+            <h3 style="margin-top: 20px;">Resource Comparison: Local vs Cloud</h3>
             <ul style="list-style-position: inside; line-height: 2;">
-                <li><strong>Model Tested:</strong> GPT-4 120B via Groq API (baseline responses)</li>
-                <li><strong>Validation Approach:</strong> Graph-based coherence checking post-generation</li>
-                <li><strong>Query Set:</strong> 25 carefully designed F11 queries eliciting logical hallucinations</li>
-                <li><strong>Evaluation:</strong> Binary classification (hallucination detected / not detected)</li>
-            </ul>
-
-            <h3 style="margin-top: 20px;">Known Limitations</h3>
-            <ul style="list-style-position: inside; line-height: 2;">
-                <li><strong>Coverage:</strong> 5/25 queries remain challenging for current prototype (20% error rate)</li>
-                <li><strong>Scope:</strong> Focuses on structural coherence, not factual accuracy or world knowledge</li>
-                <li><strong>Validation Type:</strong> Post-generation checking only, not integrated into generation process</li>
-                <li><strong>Testing Scope:</strong> Empirical results based on F6-F11 benchmark categories. While the engine is designed for general-purpose coherence validation across domains, these results validate effectiveness specifically for the query types tested. Additional benchmarking recommended for other domains</li>
+                <li><strong>Llama 70B (Local Ollama):</strong> Zero cloud costs, local compute resources only</li>
+                <li><strong>GPT-4 120B (Groq API):</strong> 18,161 tokens total, minimal cloud cost (~$0.01-0.02)</li>
+                <li><strong>Speed Advantage:</strong> Groq API averages 0.2-1.5s per query vs Llama local execution</li>
+                <li><strong>Trade-off:</strong> Groq offers fast cloud inference at low cost vs Llama's zero-cost local deployment</li>
             </ul>
         </section>
 
@@ -679,7 +644,8 @@
                 </ol>
                 <p style="margin-top: 15px;"><strong>Results location:</strong> <code>results/benchmark_results.json</code> (50 queries across F6-F11, 150 total system responses)</p>
                 <p style="margin-top: 10px;"><strong>Model:</strong> GPT-4 120B accessed via Groq API (<code>openai/gpt-oss-120b</code>)</p>
-                <p style="margin-top: 10px;"><strong>Execution time:</strong> ~2-3 minutes for complete benchmark suite</p>
+                <p style="margin-top: 10px;"><strong>Execution time:</strong> ~6 minutes for complete benchmark suite</p>
+                <p style="margin-top: 10px;"><strong>Tokens used:</strong> 41,001 tokens (22,750 prompt + 18,251 completion)</p>
             </div>
         </div>
 
@@ -720,7 +686,7 @@
 
         <footer>
             <p><strong>RCE-GPT-4 Empirical Validation</strong></p>
-            <p>Generated on 2025-11-15 | Model: GPT-4 120B via Groq</p>
+            <p>Generated on 2025-11-15 11:58:21</p>
             <p>Author: Ismail Sialyen | DOI: 10.5281/zenodo.17360372</p>
             <p><a href="https://github.com/IsmaIkami/rce-gpt4-validation" target="_blank">GitHub Repository</a> | <a href="https://ismaikami.github.io/rce-llm-empirical-validation" target="_blank">Llama 70B Benchmark</a></p>
         </footer>

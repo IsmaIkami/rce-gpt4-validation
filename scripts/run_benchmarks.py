@@ -24,11 +24,11 @@ from groq import Groq
 # Configuration
 DATASETS_DIR = Path(__file__).parent.parent / "datasets"
 RESULTS_DIR = Path(__file__).parent.parent / "results"
-RCE_API_URL = "http://localhost:8000/api/v1/validate"
+RCE_API_URL = "http://localhost:9000/api/v1/validate"  # v0.1.5 with ComputationModule
 GPT_MODEL = "openai/gpt-oss-120b"  # GPT-4 120B via Groq
 
 # Task families to benchmark
-TASK_FAMILIES = ["f6_contradictory_reasoning", "f7_temporal_reasoning", "f8_arithmetic_hallucination", "f9_noisy_rag", "f10_confidence_calibration"]
+TASK_FAMILIES = ["f6_contradictory_reasoning", "f7_temporal_reasoning", "f8_arithmetic_hallucination", "f9_noisy_rag", "f10_confidence_calibration", "f11_truthfulqa_misconceptions"]
 
 
 class BenchmarkRunner:
@@ -353,7 +353,12 @@ class BenchmarkRunner:
         tolerance = query.get("tolerance", 0.05)
         # Convert tolerance to float if it's a string
         if isinstance(tolerance, str):
-            tolerance = 0.05 if tolerance == "exact" else float(tolerance)
+            if tolerance == "exact":
+                tolerance = 0.05
+            elif tolerance == "semantic":
+                tolerance = 0.15  # More lenient for semantic matches
+            else:
+                tolerance = float(tolerance)
 
         print(f"\n  Query {query_id}: {query_text[:60]}...")
 
@@ -492,9 +497,9 @@ class BenchmarkRunner:
         # Verify RCE engine is running
         print("\n→ Verifying RCE engine status...")
         try:
-            response = requests.get("http://localhost:8000/health", timeout=5)
+            response = requests.get("http://localhost:9000/health", timeout=5)
             if response.status_code == 200:
-                print("  ✓ RCE engine is running at http://localhost:8000")
+                print("  ✓ RCE engine is running at http://localhost:9000")
             else:
                 print("  ⚠️  RCE engine responded with non-200 status")
         except Exception as e:

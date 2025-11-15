@@ -1,8 +1,8 @@
 {
-  "total_prompt_tokens": 10420,
-  "total_completion_tokens": 7741,
-  "total_tokens": 18161,
-  "total_api_calls": 75,
+  "total_prompt_tokens": 22750,
+  "total_completion_tokens": 18251,
+  "total_tokens": 41001,
+  "total_api_calls": 150,
   "model": "openai/gpt-oss-120b",
-  "execution_date": "2025-11-14T19:14:34.656529"
+  "execution_date": "2025-11-15T11:50:58.727009"
 }

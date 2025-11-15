@@ -12,7 +12,7 @@
         {
           "system": "LLM",
           "response": "the trophy",
-          "execution_time": 0.6815259456634521,
+          "execution_time": 2.5934979915618896,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -20,8 +20,8 @@
         },
         {
           "system": "LLM+RAG",
-          "response": "The trophy.",
-          "execution_time": 0.5743308067321777,
+          "response": "The trophy is too large.",
+          "execution_time": 2.6248958110809326,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -30,8 +30,8 @@
         },
         {
           "system": "RCE-LLM",
-          "response": "the trophy",
-          "execution_time": 0.38270092010498047,
+          "response": "The trophy.",
+          "execution_time": 2.3995461463928223,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -39,7 +39,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -57,7 +58,7 @@
         {
           "system": "LLM",
           "response": "The city councilmen.",
-          "execution_time": 0.2840399742126465,
+          "execution_time": 2.314255952835083,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -66,7 +67,7 @@
         {
           "system": "LLM+RAG",
           "response": "The city councilmen feared violence.",
-          "execution_time": 0.7008991241455078,
+          "execution_time": 2.8216161727905273,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -76,7 +77,7 @@
         {
           "system": "RCE-LLM",
           "response": "The city councilmen.",
-          "execution_time": 0.533933162689209,
+          "execution_time": 2.447052001953125,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -84,7 +85,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -102,7 +104,7 @@
         {
           "system": "LLM",
           "response": "$0.05",
-          "execution_time": 0.35292601585388184,
+          "execution_time": 3.2749922275543213,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -111,7 +113,7 @@
         {
           "system": "LLM+RAG",
           "response": "",
-          "execution_time": 0.6522471904754639,
+          "execution_time": 2.4688053131103516,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -121,15 +123,16 @@
         {
           "system": "RCE-LLM",
           "response": "$0.05",
-          "execution_time": 0.5596649646759033,
+          "execution_time": 2.3730640411376953,
           "success": true,
-          "coherence_score": 0.9466666666666668,
+          "coherence_score": 0.9647058823529413,
           "coherence_modules": [
             "units",
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -147,7 +150,7 @@
         {
           "system": "LLM",
           "response": "5 minutes.",
-          "execution_time": 0.6902899742126465,
+          "execution_time": 2.400736093521118,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -156,7 +159,7 @@
         {
           "system": "LLM+RAG",
           "response": "5 minutes.",
-          "execution_time": 0.5866990089416504,
+          "execution_time": 2.287813901901245,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -166,7 +169,7 @@
         {
           "system": "RCE-LLM",
           "response": "5 minutes.",
-          "execution_time": 0.7065892219543457,
+          "execution_time": 2.4185609817504883,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -174,7 +177,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,
@@ -192,7 +196,7 @@
         {
           "system": "LLM",
           "response": "47 days",
-          "execution_time": 0.3875138759613037,
+          "execution_time": 2.409118175506592,
           "success": true,
           "coherence_score": null,
           "error": null,
@@ -201,7 +205,7 @@
         {
           "system": "LLM+RAG",
           "response": "47 days.",
-          "execution_time": 0.3305490016937256,
+          "execution_time": 2.2638070583343506,
           "success": true,
           "coherence_score": null,
           "retrieval_enabled": true,
@@ -211,7 +215,7 @@
         {
           "system": "RCE-LLM",
           "response": "47 days",
-          "execution_time": 0.5274660587310791,
+          "execution_time": 2.526082992553711,
           "success": true,
           "coherence_score": 1.0,
           "coherence_modules": [
@@ -219,7 +223,8 @@
             "temporal",
             "arithmetic",
             "coreference",
-            "entailment"
+            "entailment",
+            "computation"
           ],
           "pipeline_trace": null,
           "error": null,

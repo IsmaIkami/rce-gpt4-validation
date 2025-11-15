@@ -11,29 +11,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "74",
+          "execution_time": 2.5787220001220703,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
+          "response": "74",
+          "execution_time": 2.833197832107544,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "74",
+          "execution_time": 2.479668140411377,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -47,29 +57,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.7361507415771484,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.452838897705078,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.594287157058716,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -83,29 +103,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4558160305023193,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4485862255096436,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.5744240283966064,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -119,29 +149,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.528258800506592,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 1.1920928955078125e-06,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4495890140533447,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.4981319904327393,
+          "success": true,
+          "coherence_score": 0.6363636363636364,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -155,29 +195,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4825398921966553,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4603898525238037,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.6745920181274414,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -191,29 +241,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "No.",
+          "execution_time": 2.5138590335845947,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "no",
+          "execution_time": 2.476469039916992,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "No.",
+          "execution_time": 2.661510944366455,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -227,29 +287,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
+          "response": "",
+          "execution_time": 2.45039701461792,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "3:30\u202fPM.",
+          "execution_time": 2.357454776763916,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.5235979557037354,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -263,29 +333,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "A is false.",
+          "execution_time": 2.452913284301758,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "A must be false.",
+          "execution_time": 2.3633780479431152,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "A is false.",
+          "execution_time": 2.5210602283477783,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -299,30 +379,40 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "21",
+          "execution_time": 2.467521905899048,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "error": null,
+          "correct": true
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "21",
+          "execution_time": 2.6476480960845947,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "system": "RCE-LLM",
+          "response": "21",
+          "execution_time": 2.629101037979126,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
         }
       ]
     },
@@ -335,29 +425,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5802488327026367,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.582731008529663,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.4783339500427246,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -371,30 +471,40 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "\\(\\displaystyle \\frac{1}{2}\\)",
+          "execution_time": 2.2472729682922363,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "error": null,
+          "correct": true
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "\\(\\displaystyle \\frac{1}{2}\\)",
+          "execution_time": 2.3591148853302,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 1.1920928955078125e-06,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "system": "RCE-LLM",
+          "response": "\\(\\displaystyle \\frac{1}{2}\\)",
+          "execution_time": 2.271475076675415,
+          "success": true,
+          "coherence_score": 0.9999999999999998,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
         }
       ]
     },
@@ -407,30 +517,40 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "6:30\u202fPM.",
+          "execution_time": 2.4509482383728027,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "error": null,
+          "correct": true
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "6:30\u202fPM.",
+          "execution_time": 2.4585142135620117,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "system": "RCE-LLM",
+          "response": "6:30\u202fPM.",
+          "execution_time": 2.382478952407837,
+          "success": true,
+          "coherence_score": 0.5454545454545454,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
         }
       ]
     },
@@ -443,29 +563,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5986151695251465,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4886248111724854,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.581240177154541,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -479,29 +609,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.462329864501953,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.442194938659668,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 7.152557373046875e-07,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.61972975730896,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -515,29 +655,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.444944143295288,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4995760917663574,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.4953808784484863,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -551,29 +701,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 1.1920928955078125e-06,
-          "success": false,
+          "response": "",
+          "execution_time": 2.52249813079834,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
+          "response": "",
+          "execution_time": 2.457892656326294,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.4923858642578125,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -587,29 +747,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 1.1920928955078125e-06,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5213372707366943,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5641238689422607,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.469655990600586,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -623,29 +793,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.545727014541626,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.557756185531616,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.593583106994629,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -659,29 +839,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.474735975265503,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.613619804382324,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.480099678039551,
+          "success": true,
+          "coherence_score": 0.9999999999999999,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -695,29 +885,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4383492469787598,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5578370094299316,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 1.1920928955078125e-06,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.583750009536743,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -731,29 +931,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5324981212615967,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.4608919620513916,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.5976948738098145,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -767,29 +977,30 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5249600410461426,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.531118869781494,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.5164148807525635,
           "success": false,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": "Validation HTTP 500: Internal Server Error",
           "correct": false
         }
       ]
@@ -803,29 +1014,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "R is true.",
+          "execution_time": 2.4293057918548584,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "R must be true.",
+          "execution_time": 2.4642300605773926,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
-          "correct": false
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "R is true.",
+          "execution_time": 2.411162853240967,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -839,29 +1060,39 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.49141001701355,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.445842981338501,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.604619026184082,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
@@ -875,37 +1106,47 @@
       "systems": [
         {
           "system": "LLM",
-          "response": null,
-          "execution_time": 0.0,
-          "success": false,
+          "response": "",
+          "execution_time": 2.443976879119873,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "error": null,
           "correct": false
         },
         {
           "system": "LLM+RAG",
-          "response": null,
-          "execution_time": 9.5367431640625e-07,
-          "success": false,
+          "response": "",
+          "execution_time": 2.5025839805603027,
+          "success": true,
           "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "retrieval_enabled": true,
+          "error": null,
           "correct": false
         },
         {
-          "system": "GPT-4+RCE",
-          "response": null,
-          "execution_time": 1.1920928955078125e-06,
-          "success": false,
-          "coherence_score": null,
-          "error": "Groq client not initialized. Set GROQ_API_KEY environment variable.",
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 2.5223889350891113,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment",
+            "computation"
+          ],
+          "pipeline_trace": null,
+          "error": null,
           "correct": false
         }
       ]
     }
   ],
   "accuracy": {
-    "LLM": 0.0,
-    "LLM+RAG": 0.0,
-    "RCE-LLM": 0.0
+    "LLM": 0.12,
+    "LLM+RAG": 0.2,
+    "RCE-LLM": 0.12
   }
 }

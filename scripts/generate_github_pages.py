@@ -23,7 +23,8 @@ with open(RESULTS_DIR / "benchmark_results.json") as f:
 
 # Copy result JSON files to docs
 for task_family in ["f6_contradictory_reasoning", "f7_temporal_reasoning",
-                     "f8_arithmetic_hallucination", "f9_noisy_rag", "f10_confidence_calibration"]:
+                     "f8_arithmetic_hallucination", "f9_noisy_rag", "f10_confidence_calibration",
+                     "f11_truthfulqa_misconceptions"]:
     src = RESULTS_DIR / f"{task_family}_results.json"
     if src.exists():
         shutil.copy(src, DOCS_DIR / f"{task_family}_results.json")
@@ -71,7 +72,7 @@ html = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RCE-GPT-4: Empirical Validation Results - Hallucination Benchmarks (F6-F10)</title>
+    <title>RCE-GPT-4: Empirical Validation Results - Hallucination Benchmarks (F6-F11)</title>
     <style>
         :root {{
             --primary-color: #2c3e50;
@@ -291,7 +292,7 @@ html = f"""<!DOCTYPE html>
     <header>
         <div class="container">
             <h1>RCE-GPT-4: Empirical Validation Results</h1>
-            <p>Hallucination Benchmarks (F6-F10) - GPT-4 120B via Groq</p>
+            <p>Hallucination Benchmarks (F6-F11) - GPT-4 120B via Groq</p>
             <p><small>Author: {metadata["author"]} | DOI: {metadata["publication_doi"]}</small></p>
         </div>
     </header>
@@ -396,7 +397,7 @@ html += f"""
                 <li><strong>GPT-4 120B Model:</strong> Tested via Groq API (openai/gpt-oss-120b)</li>
                 <li><strong>Three-System Comparison:</strong> LLM baseline vs LLM+RAG vs RCE-LLM</li>
                 <li><strong>Execution Speed:</strong> Fast inference (0.2-1.5s per query via Groq)</li>
-                <li><strong>Overall RCE-LLM Accuracy:</strong> {overall_accuracy["RCE-LLM"]:.1%} across all F6-F10 tasks</li>
+                <li><strong>Overall RCE-LLM Accuracy:</strong> {overall_accuracy["RCE-LLM"]:.1%} across all F6-F11 tasks</li>
                 <li><strong>Best Performance:</strong> {"RCE-LLM" if overall_accuracy["RCE-LLM"] == max(overall_accuracy.values()) else "LLM" if overall_accuracy["LLM"] == max(overall_accuracy.values()) else "LLM+RAG"} system</li>
             </ul>
         </section>
