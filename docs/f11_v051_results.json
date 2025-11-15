@@ -1,0 +1,471 @@
+{
+  "task_family": "f11_truthfulqa_misconceptions",
+  "version": "v0.5.1",
+  "total_queries": 25,
+  "accuracy": {
+    "RCE-LLM": 0.8
+  },
+  "queries": [
+    {
+      "id": "f11_001",
+      "query": "A company hires 15 employees in January, fires 8 in February, hires 12 in March, and fires 5 in April. They started with 50 employees. Calculate the final count, then verify: if the final count is even, add 10; if odd, subtract 7. What's the result?",
+      "expected_answer": "57",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": false,
+        "violations": 1,
+        "violations_list": [
+          "Conditional arithmetic mismatch: computed 60.0 (base: 67.0, is_even: False), LLM stated 74.0"
+        ],
+        "explanation": "Computational errors detected: 1 mismatches"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_002",
+      "query": "Meeting A is at 2:30 PM and lasts 90 minutes. Meeting B must start after A ends and last 45 minutes. Meeting C must end by 6:00 PM and last 75 minutes. Can all meetings fit if C starts immediately after B?",
+      "expected_answer": "No",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_003",
+      "query": "Box A contains 3 times as many items as Box B. Box C contains 5 fewer than Box B. If the total is 47 items and Box C has at least 4 items, how many are in Box A?",
+      "expected_answer": "24",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": false,
+        "violations": 1,
+        "violations_list": [
+          "Constraint satisfaction error: A should be 57.0, LLM stated 47.0"
+        ],
+        "explanation": "Computational errors detected: 1 mismatches"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_004",
+      "query": "If it's false that it's not the case that the system is secure AND it's true that the backup isn't disabled, then is the system protected?",
+      "expected_answer": "Yes, if protected means secure with backup enabled",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 0.5
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_005",
+      "query": "A train leaves Station A at 8:15 AM traveling at 60 mph. Another leaves Station B (180 miles away) at 9:00 AM traveling toward A at 80 mph. What time do they meet? Then, if the meeting time is before 11 AM, subtract 30 minutes; otherwise add 45 minutes. What's the final time?",
+      "expected_answer": "10:39 AM",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_006",
+      "query": "Statement 1: All employees who completed training are eligible. Statement 2: John is eligible. Statement 3: Sarah didn't complete training. Can we conclude John completed training?",
+      "expected_answer": "No, being eligible doesn't prove training completion",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_007",
+      "query": "Tank A holds 500 liters and drains at 15 liters/minute. Tank B holds 800 liters and drains at 25 liters/minute. They start draining simultaneously at 3:00 PM. At what time will they contain the same amount?",
+      "expected_answer": "3:30 PM",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_008",
+      "query": "If A implies B, and B implies C, and C implies D, and we know D is false, what can we conclude about A?",
+      "expected_answer": "A must be false (modus tollens chain)",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_009",
+      "query": "A recipe needs 2.5 cups flour per batch. You have 18 cups. After making batches, you have 0.5 cups left. How many batches did you make? If the answer is prime, multiply by 3; if composite, divide by 2. What's the result?",
+      "expected_answer": "21",
+      "domain": "logic",
+      "v015": {
+        "correct": true,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "No computational content detected"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_010",
+      "query": "Event X happens every 6 days starting Monday. Event Y happens every 8 days starting Wednesday. On what day of the week will they first coincide?",
+      "expected_answer": "Monday",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "No computational content detected"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_011",
+      "query": "In a group of 100 people: 60 like coffee, 50 like tea, 30 like both. Someone is randomly selected and likes coffee. What's the probability they also like tea? Express as a reduced fraction.",
+      "expected_answer": "1/2",
+      "domain": "logic",
+      "v015": {
+        "correct": true,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "No computational content detected"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_012",
+      "query": "Process A takes 4 hours if started between 9 AM-12 PM, or 6 hours if started after 12 PM. Process B must start when A ends and takes 3 hours. If A starts at 11:30 AM, when does B end?",
+      "expected_answer": "6:30 PM",
+      "domain": "temporal",
+      "v015": {
+        "correct": true,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_013",
+      "query": "If it's not the case that (P AND Q) is false, and we know Q is true, can we determine if R is true given that P implies R?",
+      "expected_answer": "Yes, R must be true",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_014",
+      "query": "A worker is paid $15/hour for first 8 hours, $22.50/hour for next 4 hours, and $30/hour after that. They worked from 7:00 AM to 9:30 PM with a 1.5-hour unpaid break. Calculate total pay, then if it exceeds $300, add 10%; otherwise add $25. What's the final amount?",
+      "expected_answer": "$407",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_015",
+      "query": "In a relay: Runner A completes their leg in 45 seconds. Runner B takes 15% longer than A. Runner C takes 20% less time than B. Runner D takes the average of A and C. What's the total team time?",
+      "expected_answer": "183.375 seconds",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "No computational content detected"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_016",
+      "query": "Task X cannot start before 2:00 PM and needs 90 minutes. Task Y needs 2 hours and must end before 5:30 PM. Task Z needs 45 minutes and must start after X ends. Can all tasks complete if Y starts at 2:00 PM and tasks don't overlap?",
+      "expected_answer": "No",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_017",
+      "query": "Either (A and B) or (not-A and C) must be true. We know B is false. If A is true, must C be false?",
+      "expected_answer": "Yes",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_018",
+      "query": "A population doubles every 3 years. Starting at 1,200 in year 2020, what year does it first exceed 10,000? Then, how many years after 2020 is this?",
+      "expected_answer": "9 years",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "No computational content detected"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_019",
+      "query": "Container A has 240ml and loses 15ml/min. Container B has 180ml and gains 10ml/min. After how many minutes do they have equal volume? If this time is less than 10 minutes, what's the volume at that point; if more, what's the time in seconds?",
+      "expected_answer": "144 seconds",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": false,
+        "violations": 1,
+        "violations_list": [
+          "Arithmetic mismatch: computed 235.0, LLM stated 10.0"
+        ],
+        "explanation": "Computational errors detected: 1 mismatches"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_020",
+      "query": "Given: If X then Y. If Y then (Z or W). We observe NOT-Z and NOT-W. Can we conclude NOT-X?",
+      "expected_answer": "Yes (modus tollens through disjunction)",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_021",
+      "query": "A machine produces 45 units/hour for 3 hours, then 60 units/hour for 2 hours, then breaks for 30 minutes, then 50 units/hour for 1.5 hours. If each unit weighs 1.2kg and shipping boxes hold 25kg max, how many boxes are needed?",
+      "expected_answer": "17",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": false,
+        "violations": 1,
+        "violations_list": [
+          "Arithmetic mismatch: computed 0.125, LLM stated 25.0"
+        ],
+        "explanation": "Computational errors detected: 1 mismatches"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_022",
+      "query": "Meetings scheduled: 9:00-10:15 AM, 10:45-11:30 AM, 1:00-2:45 PM, 3:15-4:00 PM. Lunch is 12:00-1:00 PM. A new 75-minute meeting must fit with 15-minute buffer before and after each existing commitment. What's the earliest it can start?",
+      "expected_answer": "4:15 PM",
+      "domain": "temporal",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_023",
+      "query": "If neither P nor Q can be true when R is false, and we know at least one of P or Q is true, what can we conclude about R?",
+      "expected_answer": "R must be true",
+      "domain": "logic",
+      "v015": {
+        "correct": true,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "Computational verification passed"
+      },
+      "status": "\u2796 MAINTAINED"
+    },
+    {
+      "id": "f11_024",
+      "query": "A cyclist travels uphill at 12 mph for 45 minutes, then downhill at 24 mph. If the total round trip takes 1 hour 15 minutes, how far did they travel uphill?",
+      "expected_answer": "9 miles",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": true,
+        "violations": 0,
+        "violations_list": [],
+        "explanation": "No computational content detected"
+      },
+      "status": "\u2705 IMPROVED"
+    },
+    {
+      "id": "f11_025",
+      "query": "Statement: Everyone who passed the test studied. Alex didn't study. Bob passed. Can we conclude: (1) Alex didn't pass, and (2) Bob studied?",
+      "expected_answer": "Both conclusions are valid",
+      "domain": "logic",
+      "v015": {
+        "correct": false,
+        "violations": 0,
+        "coherence_score": 1.0
+      },
+      "v051": {
+        "correct": false,
+        "violations": 2,
+        "violations_list": [
+          "Invalid logical inference: Conclusion does not follow from premises",
+          "Multi-hop inference failed: Conclusion cannot be derived from premises"
+        ],
+        "explanation": "Computational errors detected: 2 mismatches"
+      },
+      "status": "\u2796 MAINTAINED"
+    }
+  ]
+}

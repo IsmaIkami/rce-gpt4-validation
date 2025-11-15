@@ -1,0 +1,1136 @@
+{
+  "task_family": "f11_truthfulqa_misconceptions",
+  "total_queries": 25,
+  "queries": [
+    {
+      "query_id": "f11_001",
+      "query_text": "A company hires 15 employees in January, fires 8 in February, hires 12 in March, and fires 5 in April. They started with 50 employees. Calculate the final count, then verify: if the final count is even, add 10; if odd, subtract 7. What's the result?",
+      "expected_answer": "57",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "74",
+          "execution_time": 0.3460562229156494,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "74",
+          "execution_time": 0.3614490032196045,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "74",
+          "execution_time": 0.38504505157470703,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_002",
+      "query_text": "Meeting A is at 2:30 PM and lasts 90 minutes. Meeting B must start after A ends and last 45 minutes. Meeting C must end by 6:00 PM and last 75 minutes. Can all meetings fit if C starts immediately after B?",
+      "expected_answer": "No",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.6041960716247559,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.5522141456604004,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5154049396514893,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_003",
+      "query_text": "Box A contains 3 times as many items as Box B. Box C contains 5 fewer than Box B. If the total is 47 items and Box C has at least 4 items, how many are in Box A?",
+      "expected_answer": "24",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.43793797492980957,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.46774888038635254,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.47729015350341797,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_004",
+      "query_text": "If it's false that it's not the case that the system is secure AND it's true that the backup isn't disabled, then is the system protected?",
+      "expected_answer": "Yes, if protected means secure with backup enabled",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.6224269866943359,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.5284008979797363,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5503129959106445,
+          "success": true,
+          "coherence_score": 0.5,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_005",
+      "query_text": "A train leaves Station A at 8:15 AM traveling at 60 mph. Another leaves Station B (180 miles away) at 9:00 AM traveling toward A at 80 mph. What time do they meet? Then, if the meeting time is before 11 AM, subtract 30 minutes; otherwise add 45 minutes. What's the final time?",
+      "expected_answer": "10:39 AM",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.5030169486999512,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.5150818824768066,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5299408435821533,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_006",
+      "query_text": "Statement 1: All employees who completed training are eligible. Statement 2: John is eligible. Statement 3: Sarah didn't complete training. Can we conclude John completed training?",
+      "expected_answer": "No, being eligible doesn't prove training completion",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "No.",
+          "execution_time": 0.38485097885131836,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "no",
+          "execution_time": 0.24422311782836914,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "No.",
+          "execution_time": 0.3846447467803955,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_007",
+      "query_text": "Tank A holds 500 liters and drains at 15 liters/minute. Tank B holds 800 liters and drains at 25 liters/minute. They start draining simultaneously at 3:00 PM. At what time will they contain the same amount?",
+      "expected_answer": "3:30 PM",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4172537326812744,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "3:30\u202fPM.",
+          "execution_time": 0.39170169830322266,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.45072007179260254,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_008",
+      "query_text": "If A implies B, and B implies C, and C implies D, and we know D is false, what can we conclude about A?",
+      "expected_answer": "A must be false (modus tollens chain)",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "A is false.",
+          "execution_time": 0.40070295333862305,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "A must be false.",
+          "execution_time": 0.32711291313171387,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "A is false.",
+          "execution_time": 0.42711305618286133,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_009",
+      "query_text": "A recipe needs 2.5 cups flour per batch. You have 18 cups. After making batches, you have 0.5 cups left. How many batches did you make? If the answer is prime, multiply by 3; if composite, divide by 2. What's the result?",
+      "expected_answer": "21",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "21",
+          "execution_time": 0.49015021324157715,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "21",
+          "execution_time": 0.3895881175994873,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "21",
+          "execution_time": 0.5260210037231445,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f11_010",
+      "query_text": "Event X happens every 6 days starting Monday. Event Y happens every 8 days starting Wednesday. On what day of the week will they first coincide?",
+      "expected_answer": "Monday",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.46117711067199707,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.6062788963317871,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.483950138092041,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_011",
+      "query_text": "In a group of 100 people: 60 like coffee, 50 like tea, 30 like both. Someone is randomly selected and likes coffee. What's the probability they also like tea? Express as a reduced fraction.",
+      "expected_answer": "1/2",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "\\(\\displaystyle \\frac{1}{2}\\)",
+          "execution_time": 0.2864382266998291,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "\\(\\displaystyle \\frac{1}{2}\\)",
+          "execution_time": 0.2777087688446045,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "\\(\\displaystyle \\frac{1}{2}\\)",
+          "execution_time": 0.33762502670288086,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f11_012",
+      "query_text": "Process A takes 4 hours if started between 9 AM-12 PM, or 6 hours if started after 12 PM. Process B must start when A ends and takes 3 hours. If A starts at 11:30 AM, when does B end?",
+      "expected_answer": "6:30 PM",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "6:30\u202fPM.",
+          "execution_time": 0.2825148105621338,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "6:30\u202fPM.",
+          "execution_time": 0.39478588104248047,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "6:30\u202fPM.",
+          "execution_time": 0.35300207138061523,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f11_013",
+      "query_text": "If it's not the case that (P AND Q) is false, and we know Q is true, can we determine if R is true given that P implies R?",
+      "expected_answer": "Yes, R must be true",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.3959341049194336,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.42977094650268555,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5674989223480225,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_014",
+      "query_text": "A worker is paid $15/hour for first 8 hours, $22.50/hour for next 4 hours, and $30/hour after that. They worked from 7:00 AM to 9:30 PM with a 1.5-hour unpaid break. Calculate total pay, then if it exceeds $300, add 10%; otherwise add $25. What's the final amount?",
+      "expected_answer": "$407",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.49300098419189453,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.3969430923461914,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.46993494033813477,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_015",
+      "query_text": "In a relay: Runner A completes their leg in 45 seconds. Runner B takes 15% longer than A. Runner C takes 20% less time than B. Runner D takes the average of A and C. What's the total team time?",
+      "expected_answer": "183.375 seconds",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.39941978454589844,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.4215826988220215,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.57785964012146,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_016",
+      "query_text": "Task X cannot start before 2:00 PM and needs 90 minutes. Task Y needs 2 hours and must end before 5:30 PM. Task Z needs 45 minutes and must start after X ends. Can all tasks complete if Y starts at 2:00 PM and tasks don't overlap?",
+      "expected_answer": "No",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4665708541870117,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.4001169204711914,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5679030418395996,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_017",
+      "query_text": "Either (A and B) or (not-A and C) must be true. We know B is false. If A is true, must C be false?",
+      "expected_answer": "Yes",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.6046798229217529,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.5416710376739502,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5456211566925049,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_018",
+      "query_text": "A population doubles every 3 years. Starting at 1,200 in year 2020, what year does it first exceed 10,000? Then, how many years after 2020 is this?",
+      "expected_answer": "9 years",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.5280771255493164,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.49039387702941895,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.4731252193450928,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_019",
+      "query_text": "Container A has 240ml and loses 15ml/min. Container B has 180ml and gains 10ml/min. After how many minutes do they have equal volume? If this time is less than 10 minutes, what's the volume at that point; if more, what's the time in seconds?",
+      "expected_answer": "144 seconds",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.44094204902648926,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.524763822555542,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5920019149780273,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_020",
+      "query_text": "Given: If X then Y. If Y then (Z or W). We observe NOT-Z and NOT-W. Can we conclude NOT-X?",
+      "expected_answer": "Yes (modus tollens through disjunction)",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4582526683807373,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.62375807762146,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.44935083389282227,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_021",
+      "query_text": "A machine produces 45 units/hour for 3 hours, then 60 units/hour for 2 hours, then breaks for 30 minutes, then 50 units/hour for 1.5 hours. If each unit weighs 1.2kg and shipping boxes hold 25kg max, how many boxes are needed?",
+      "expected_answer": "17",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4983937740325928,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.4105241298675537,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.44216132164001465,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_022",
+      "query_text": "Meetings scheduled: 9:00-10:15 AM, 10:45-11:30 AM, 1:00-2:45 PM, 3:15-4:00 PM. Lunch is 12:00-1:00 PM. A new 75-minute meeting must fit with 15-minute buffer before and after each existing commitment. What's the earliest it can start?",
+      "expected_answer": "4:15 PM",
+      "domain": "temporal",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.3919250965118408,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.40012073516845703,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5233941078186035,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_023",
+      "query_text": "If neither P nor Q can be true when R is false, and we know at least one of P or Q is true, what can we conclude about R?",
+      "expected_answer": "R must be true",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "R must be true.",
+          "execution_time": 0.46544790267944336,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "R must be true.",
+          "execution_time": 0.5147390365600586,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": true
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "R must be true.",
+          "execution_time": 0.4356417655944824,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "query_id": "f11_024",
+      "query_text": "A cyclist travels uphill at 12 mph for 45 minutes, then downhill at 24 mph. If the total round trip takes 1 hour 15 minutes, how far did they travel uphill?",
+      "expected_answer": "9 miles",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4794909954071045,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.5346338748931885,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.42973995208740234,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "query_id": "f11_025",
+      "query_text": "Statement: Everyone who passed the test studied. Alex didn't study. Bob passed. Can we conclude: (1) Alex didn't pass, and (2) Bob studied?",
+      "expected_answer": "Both conclusions are valid",
+      "domain": "logic",
+      "task_family": "f11_truthfulqa_misconceptions",
+      "systems": [
+        {
+          "system": "LLM",
+          "response": "",
+          "execution_time": 0.4101369380950928,
+          "success": true,
+          "coherence_score": null,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "LLM+RAG",
+          "response": "",
+          "execution_time": 0.4016540050506592,
+          "success": true,
+          "coherence_score": null,
+          "retrieval_enabled": true,
+          "error": null,
+          "correct": false
+        },
+        {
+          "system": "RCE-LLM",
+          "response": "",
+          "execution_time": 0.5142660140991211,
+          "success": true,
+          "coherence_score": 1.0,
+          "coherence_modules": [
+            "units",
+            "temporal",
+            "arithmetic",
+            "coreference",
+            "entailment"
+          ],
+          "pipeline_trace": null,
+          "error": null,
+          "correct": false
+        }
+      ]
+    }
+  ],
+  "accuracy": {
+    "LLM": 0.16,
+    "LLM+RAG": 0.2,
+    "RCE-LLM": 0.16
+  }
+}

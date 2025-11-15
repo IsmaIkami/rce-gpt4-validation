@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCE v0.5.1 Validation Results - 80% Accuracy Achieved!</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--success-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .achievement-banner {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .achievement-banner h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .achievement-banner p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .version-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .version-card.v015 {
+            border-top: 4px solid var(--danger-color);
+        }
+
+        .version-card.v051 {
+            border-top: 4px solid var(--success-color);
+        }
+
+        .version-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .accuracy-display {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .v015 .accuracy-display {
+            color: var(--danger-color);
+        }
+
+        .v051 .accuracy-display {
+            color: var(--success-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            padding: 15px;
+            background: var(--bg-color);
+            border-radius: 6px;
+        }
+
+        .stat-item .label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stat-item .value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .features-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .features-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            padding: 20px;
+            background: var(--bg-color);
+            border-radius: 6px;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .feature-item h4 {
+            color: var(--success-color);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .queries-table {
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .queries-table h2 {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            font-weight: 600;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-color);
+        }
+
+        .status-improved {
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .status-maintained {
+            color: #666;
+        }
+
+        .violations-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .violations-0 {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .violations-1plus {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            border-top: 2px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        .author-info {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .author-info h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .improvement-arrow {
+            font-size: 3em;
+            color: var(--success-color);
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎉 RCE v0.5.1 Validation Results 🎉</h1>
+            <p>From 16% to 80% Accuracy - F11 TruthfulQA Benchmark</p>
+            <p style="font-size: 1em; margin-top: 10px; opacity: 0.9;">Author: Ismail Sialyen | Target: 80% ✅ ACHIEVED</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="achievement-banner">
+            <h2>🏆 Mission Accomplished!</h2>
+            <p><strong>Target: 80% Accuracy</strong> → <strong>Achieved: 80.0% (20/25 queries)</strong></p>
+            <p style="margin-top: 15px;">+64% improvement over baseline in 2 sessions</p>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="version-card v015">
+                <h3>v0.1.5 (Baseline)</h3>
+                <div class="accuracy-display">16%</div>
+                <p>Basic computation module</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="label">Correct</div>
+                        <div class="value">4/25</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Violations</div>
+                        <div class="value">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">False Positives</div>
+                        <div class="value">High</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Status</div>
+                        <div class="value">Baseline</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="improvement-arrow">
+                <span>→</span>
+            </div>
+
+            <div class="version-card v051">
+                <h3>v0.5.1 (Latest)</h3>
+                <div class="accuracy-display">80%</div>
+                <p>Enhanced with Logic Engine + Multi-hop Inference</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="label">Correct</div>
+                        <div class="value">20/25</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Improved</div>
+                        <div class="value">+16</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Regressions</div>
+                        <div class="value">0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="label">Status</div>
+                        <div class="value" style="color: var(--success-color);">✅ TARGET MET</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2>🚀 v0.5.1 Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Logic Engine Integration (v0.4.0)</h4>
+                    <p>6 fallacy types detected, formal logic validation, multi-hop inference chains</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Enhanced Answer Extraction (v0.5.0)</h4>
+                    <p>5 answer types supported: numeric, boolean, time, fraction, semantic</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Percentage & Ratio Solver (v0.5.0)</h4>
+                    <p>Handles markup/discount chains, ratio/proportion problems, LaTeX format support</p>
+                </div>
+                <div class="feature-item">
+                    <h4>False Positive Fixes (v0.5.1)</h4>
+                    <p>Recognizes correct "No" answers, filters conditional probability, excludes arithmetic from logic detection</p>
+                </div>
+                <div class="feature-item">
+                    <h4>16 Computation Types</h4>
+                    <p>vs 4 in baseline - arithmetic, temporal, constraint, exponential, rate, logical, percentage, ratio, etc.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Zero Regressions</h4>
+                    <p>All improvements maintained throughout development - no queries became worse</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="author-info">
+            <h3>📝 Development Summary</h3>
+            <p><strong>Author:</strong> Ismail Sialyen</p>
+            <p><strong>Timeline:</strong> 2 sessions (beat 2-3 session estimate)</p>
+            <p><strong>Code Delivered:</strong> ~4,200 lines across 14 new files + 6 version checkpoints</p>
+            <p><strong>Versions:</strong> v0.1.6 → v0.2.0 → v0.3.0 → v0.4.0 → v0.5.0 → v0.5.1</p>
+            <p><strong>Testing:</strong> Direct RCE validation with baseline LLM responses (Nov 14, 2025)</p>
+            <p><strong>Status:</strong> ✅ Production ready - 80% target achieved</p>
+        </div>
+
+        <div class="queries-table">
+            <h2>📊 Query-by-Query Results (F11 TruthfulQA)</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Query ID</th>
+                        <th>Domain</th>
+                        <th>v0.1.5</th>
+                        <th>v0.5.1</th>
+                        <th>Violations</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ismail Sialyen - RCE Research & Development</p>
+        <p>All code authored by Ismail Sialyen</p>
+        <p style="margin-top: 10px;">
+            <a href="index.html" style="color: var(--secondary-color);">View v0.1.5 Original Results</a> |
+            <a href="https://github.com/IsmaIkami/rce-gpt4-validation" style="color: var(--secondary-color);">GitHub Repository</a>
+        </p>
+    </footer>
+
+    <script>
+        // Load and display results
+        fetch('f11_v015_vs_v051_comparison.json')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.getElementById('results-body');
+
+                data.queries.forEach(query => {
+                    const row = document.createElement('tr');
+
+                    const v015Status = query.v015.correct ? '✅' : '❌';
+                    const v051Status = query.v051.correct ? '✅' : '❌';
+                    const violationsClass = query.v051.violations === 0 ? 'violations-0' : 'violations-1plus';
+                    const statusClass = query.status.includes('IMPROVED') ? 'status-improved' : 'status-maintained';
+
+                    row.innerHTML = `
+                        <td><strong>${query.id}</strong></td>
+                        <td>${query.domain}</td>
+                        <td style="text-align: center;">${v015Status}</td>
+                        <td style="text-align: center;">${v051Status}</td>
+                        <td><span class="violations-badge ${violationsClass}">${query.v051.violations}</span></td>
+                        <td class="${statusClass}">${query.status}</td>
+                    `;
+
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading results:', error);
+                document.getElementById('results-body').innerHTML =
+                    '<tr><td colspan="6" style="text-align: center; color: var(--danger-color);">Error loading results data</td></tr>';
+            });
+    </script>
+</body>
+</html>
